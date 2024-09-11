@@ -1,0 +1,272 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #3a963f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido del header */
+    align-items: center;
+}
+
+header .logo {
+    margin-right: auto; /* Mueve el logo a la izquierda */
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav {
+    flex-grow: 1; /* Permite que el nav ocupe todo el espacio disponible */
+    text-align: center; /* Centra el contenido dentro del nav */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Cambia a inline-block para centrado */
+}
+
+header nav ul li {
+    position: relative;
+    display: inline-block; /* Muestra los li uno al lado del otro */
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Submenú */
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #003366;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+header nav ul li ul li {
+    margin: 0;
+}
+
+header nav ul li ul li a {
+    padding: 10px;
+    color: #fff;
+    font-weight: normal;
+    border-bottom: 1px solid #004080;
+}
+
+header nav ul li ul li a:hover {
+    background-color: #004080;
+}
+
+/* Mostrar submenú al pasar el ratón */
+header nav ul li:hover ul {
+    display: block;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+}
+
+.carousel .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.carousel .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(132, 132, 132, 0.7); /* Mantiene el fondo oscuro */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Añade un padding para evitar que el texto se pegue a los bordes */
+    box-sizing: border-box; /* Asegura que el padding no desborde el contenedor */
+    z-index: 2; /* Asegura que el overlay esté sobre la imagen */
+}
+.misionyvision {
+    display: flex;
+    justify-content: space-around; /* Espacia las secciones uniformemente */
+    padding: 20px; /* Añade un poco de espacio alrededor */
+    background-color: #f4f4f4; /* Opcional: Añade un color de fondo para distinguir la sección */
+    
+}
+
+.mision, .vision {
+    background-color: #ff2f05;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 45%; /* Ajusta el ancho para que quepan en la fila */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    border-radius: 20px; /* Añade bordes redondeados */
+}
+
+.mision {
+    margin-right: 10px; /* Añade un pequeño margen entre las secciones */
+}
+
+.vision {
+    margin-left: 10px; /* Añade un pequeño margen entre las secciones */
+}
+
+.carousel .overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto para mayor legibilidad */
+}
+
+.carousel .overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto para mayor legibilidad */
+}
+
+.carousel .overlay .cta {
+    background-color: #ffd700;
+    color: #002855;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carousel .overlay .cta:hover {
+    background-color: #fff;
+}
+
+/* Asegúrate de que la imagen no cubra el overlay */
+.carousel .slide img {
+    z-index: 1;
+}
+
+.mensaje-destacado {
+    background-color: #3a963f; /* Color de fondo llamativo */
+    color: #fff; /* Color del texto para buen contraste */
+    padding: 40px 20px; /* Espaciado interno para hacer que el mensaje se destaque */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Espaciado superior e inferior para separar la sección del contenido */
+    border-radius: 10px; /* Bordes redondeados para un efecto más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+.texto-mensaje h2 {
+    font-size: 2em; /* Tamaño de fuente grande para el mensaje */
+    font-weight: bold; /* Peso de fuente para mayor énfasis */
+    margin: 0; /* Elimina el margen superior e inferior */
+    padding: 0; /* Elimina el padding interno */
+    line-height: 1.4; /* Ajusta el interlineado para mejor legibilidad */
+}
+
+/* Footer */
+footer {
+    background-color: #3a963f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-content p {
+    margin: 5px 0;
+}
+.Niveles_Academicos {
+    display: flex;
+    justify-content: space-around; /* Espacia las imágenes uniformemente */
+    padding: 20px; /* Añade espacio alrededor de la sección */
+    background-color: #f4f4f4; /* Color de fondo para distinguir la sección */
+}
+
+.Niveles_Academicos div {
+    flex: 1; /* Permite que las imágenes se ajusten al espacio disponible */
+    margin: 0 10px; /* Espacio entre las imágenes */
+}
+
+.Niveles_Academicos img {
+    width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados para un acabado más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+
+/* Grid Mosaico */
+.grid-mosaico {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas */
+    grid-template-rows: repeat(3, 1fr); /* Crea 3 filas */
+    gap: 20px; /* Espacio entre los mosaicos */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.grid-item p {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
