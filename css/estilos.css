@@ -11,7 +11,7 @@ header {
     background-color: #3a963f;
     padding: 10px 20px;
     display: flex;
-    justify-content: center; /* Centra el contenido del header */
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -32,12 +32,13 @@ header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline-block; /* Cambia a inline-block para centrado */
+    display: flex; /* Cambia a inline-block para centrado */
+    flex-direction: row;
+    justify-content: center;
 }
 
 header nav ul li {
     position: relative;
-    display: inline-block; /* Muestra los li uno al lado del otro */
     margin: 0 15px;
 }
 
@@ -126,9 +127,9 @@ header nav ul li:hover ul {
 }
 .misionyvision {
     display: flex;
-    justify-content: space-around; /* Espacia las secciones uniformemente */
+    justify-content: space-between; /* Alinea las secciones a los lados opuestos */
     padding: 20px; /* Añade un poco de espacio alrededor */
-    background-color: #f4f4f4; /* Opcional: Añade un color de fondo para distinguir la sección */
+    
     
 }
 
@@ -138,7 +139,7 @@ header nav ul li:hover ul {
     text-align: center;
     padding: 20px;
     width: 45%; /* Ajusta el ancho para que quepan en la fila */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    
     border-radius: 20px; /* Añade bordes redondeados */
 }
 
@@ -211,7 +212,7 @@ footer .footer-content p {
 }
 .Niveles_Academicos {
     display: flex;
-    justify-content: space-around; /* Espacia las imágenes uniformemente */
+    justify-content: space-between; /* Espacia las imágenes uniformemente */
     padding: 20px; /* Añade espacio alrededor de la sección */
     background-color: #f4f4f4; /* Color de fondo para distinguir la sección */
 }
@@ -233,7 +234,7 @@ footer .footer-content p {
 .grid-mosaico {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas */
-    grid-template-rows: repeat(3, 1fr); /* Crea 3 filas */
+   
     gap: 20px; /* Espacio entre los mosaicos */
     padding: 20px;
     background-color: #f4f4f4;
@@ -266,7 +267,56 @@ a{
     color: #000;
 }
 
+/* Para pantallas de 1024px o menos (tablets) */
+@media (max-width: 1024px) {
+    .misionyvision {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .mision, .vision {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Niveles_Academicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Niveles_Academicos div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .grid-mosaico {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para pantallas de 768px o menos (móviles) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .Niveles_Academicos {
+        flex-direction: column;
+    }
+
+    .grid-mosaico {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
